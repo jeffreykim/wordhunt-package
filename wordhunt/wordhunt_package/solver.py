@@ -3,10 +3,10 @@ from .english import create_english_list, restore_trie
 class Solver:
 
 
-    def __init__(self, matrix_string, length=4, width=4, path="english.json"):
+    def __init__(self, matrix_string, length=4, width=4):
         if len(matrix_string) != length * width or not matrix_string.isalnum():
             raise ValueError("Invalid input string")
-        self.trie = restore_trie(path)
+        self.trie = restore_trie()
         self.matrix = [[None for j in range(width)] for i in range(length)]
         index = 0
         for i in range(length):

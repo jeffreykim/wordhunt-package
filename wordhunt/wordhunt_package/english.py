@@ -1,6 +1,7 @@
 import json
+import importlib.resources
 
-def create_english_list(path: str) -> set[str]:
+def create_english_list(path):
     with open(path, 'r') as f:
         lines = f.readlines()
     
@@ -26,10 +27,10 @@ def create_trie(wordlist):
     for word in wordlist:
         trie.insert(word)
 
-    with open('english.json', 'w') as f:
+    with open('.data/english.json', 'w') as f:
         json.dump(trie, f)
 
-def restore_trie(path):
-    with open(path, 'r') as f:
+def restore_trie():
+    with importlib.resources.open_text('wordhunt_package.data', 'english.json') as f:
         trie = json.load(f)
     return trie

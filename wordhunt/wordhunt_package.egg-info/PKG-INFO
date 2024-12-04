@@ -1,7 +1,7 @@
 Metadata-Version: 2.1
-Name: wordhunt_bot
-Version: 0.1.9
-Summary: This script will take a string and output possible words in Wordhunt.
+Name: wordhunt_package
+Version: 0.2.0
+Summary: Type "wordhunt" and enter your Wordhunt board to get all possible words in Wordhunt!
 Home-page: https://github.com/jeffreykim/wordhunt-bot
 Author: Jeffrey Kim
 Author-email: jkjeffrey7@gmail.com
